@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-'''3-write_file.py
-'''
+"""0-read_file.py
+"""
 
 
-def write_file(filename="", text=""):
-    ''' writes a string to a text file, returns number of chars written '''
+def read_file(filename=""):
+    """ reads a text file (UTF8) and prints it to stdout """
 
-    with open(filename, 'w', encoding="utf-8") as f_obj:
-        return f_obj.write(text)
+    with open(filename, 'r', encoding="utf-8") as f_obj:
+        content = f_obj.read()
+    print(content, end="")
